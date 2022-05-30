@@ -2,12 +2,12 @@
 % Please edit documentation in R/bootClassic.R
 \name{bootClassic}
 \alias{bootClassic}
-\title{bootClassic}
+\title{Simple proportion statistics function for bootstrap estimation}
 \usage{
 bootClassic(x, params)
 }
 \arguments{
-\item{x}{A data frame with \code{primary sampling unit (PSU)} in column named
+\item{x}{A data frame with \strong{primary sampling unit (PSU)} in column named
 \code{psu} and with data column/s containing the binary variable/s (0/1) of
 interest with column names corresponding to \code{params} values}
 
@@ -16,13 +16,12 @@ of interest contained in \code{x}}
 }
 \value{
 A numeric vector of the mean of each binary variable of interest with
-  length equal to \code{length(params)}
+length equal to \code{length(params)}
 }
 \description{
 Simple proportion statistics function for bootstrap estimation
 }
 \examples{
-
 # Example call to bootClassic function
 
 meanResults <- bootClassic(x = indicatorsHH,

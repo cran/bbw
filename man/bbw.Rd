@@ -12,14 +12,10 @@ weighting (e.g. \code{population proportional sampling} or \code{PPS} as
 used in \code{Standardized Monitoring and Assessment of Relief and
 Transitions} or \code{SMART} surveys) or posterior weighting (e.g. as used in
 \code{Rapid Assessment Method} or \code{RAM} and \code{Simple Spatial
-Sampling Method} or \code{S3M} surveys). The method was developed by
-Accion contra la Faim (ACF), Brixton Health, Concern Worldwide, Global
-Alliance for Improved Nutrition (GAIN), UNICEF Sierra Leone, UNICEF Sudan and
-Valid International. It has been tested by the Centers for Disease
-Control (CDC) using infant and young child feeding (IYCF) data.
+Sampling Method} or \code{S3M} surveys).
 }
 \details{
-The bootstrap technique is summarised in this
+The bootstrap technique is described in this
 \href{https://en.wikipedia.org/wiki/Bootstrapping_(statistics)}{article}.
 The \code{BBW} used in \code{RAM} and \code{S3M} is a modification to the
 \code{percentile bootstrap} to include \code{blocking} and \code{weighting} to
@@ -38,7 +34,7 @@ replacement.}
 \item{\code{Weighted}}{\code{RAM} and \code{S3M} samples do not use
 \code{population proportional sampling (PPS)} to weight the sample prior to
 data collection (e.g. as is done with \code{SMART} surveys). This means that
-a posterior weighting procedure is required. \code{BBW} uses a
+a posterior weighting procedure is required. \code{bbw} uses a
 \code{"roulette wheel"} algorithm to weight (i.e. by population) the
 selection probability of \code{PSUs} in bootstrap replicates.}
 }
@@ -58,15 +54,34 @@ consists of the \code{0.025th (95\% LCL)}, \code{0.5th (point estimate)}, and
 \code{0.975th (95\% UCL)} quantiles of the distribution of the statistic across
 all survey replicates.
 
-Early versions of the \code{BBW} did not resample observations within
+Early versions of the \code{bbw} did not resample observations within
 \code{PSUs} following:
 
 \cite{Cameron AC, Gelbach JB, Miller DL, Bootstrap-based improvements for
 inference with clustered errors, Review of Economics and Statistics,
-2008:90;414–427 \url{doi.org/10.1162/rest.90.3.414}}
+2008:90;414–427 \doi{10.1162/rest.90.3.414}}
 
 and used a large number (e.g. \eqn{3999}) survey replicates. Current versions of
-the \code{BBW} resample observations within \code{PSUs} and use a smaller
+the \code{bbw} resample observations within \code{PSUs} and use a smaller
 number of survey replicates (e.g. \eqn{n = 400}). This is a more computationally
 efficient approach
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/rapidsurveys/bbw}
+  \item \url{https://rapidsurveys.io/bbw/}
+  \item Report bugs at \url{https://github.com/rapidsurveys/bbw/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ernest Guevarra \email{ernestgmd@gmail.com} (\href{https://orcid.org/0000-0002-4887-4415}{ORCID})
+
+Authors:
+\itemize{
+  \item Mark Myatt \email{mark@brixtonhealth.com}
+}
+
+}
+\keyword{internal}
