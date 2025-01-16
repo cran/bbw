@@ -1,5 +1,4 @@
-###############################################################################
-#
+#' 
 #' Recode
 #'
 #' Utility function that recodes variables based on user recode specifications.
@@ -52,14 +51,18 @@
 #'     then a numeric result is returned; if \code{var} is a factor then
 #'     (by default) so is the result.
 #' }
+#' 
 #' @param afr Return a factor. Default is TRUE if \code{var} is a factor and is
 #'   FALSE otherwise
 #' @param anr Coerce result to numeric (default is TRUE)
 #' @param levels Order of the levels in the returned factor; the default is to use
 #'    the sort order of the level names.
-#' @return Recoded variable
+#' 
+#' 
+#' @returns Recoded variable
+#' 
 #' @examples
-#' # Recode values from 1 to 9 to varios specifications
+#' # Recode values from 1 to 9 to various specifications
 #' var <- sample(x = 1:9, size = 100, replace = TRUE)
 #'
 #' # Recode single values
@@ -76,8 +79,7 @@
 #'
 #' @export
 #'
-#
-################################################################################
+
 recode <- function(var, recodes, afr, anr = TRUE, levels) {
   squeezeBlanks <- function(text) {
     gsub(" *", "",  text)
@@ -110,6 +112,7 @@ recode <- function(var, recodes, afr, anr = TRUE, levels) {
       }
     }
   }
+  
   if (afr) {
     result <- if (!missing(levels)) factor(result, levels = levels) else as.factor(result)
   } else if (anr && (!is.numeric(result))) {
@@ -121,5 +124,6 @@ recode <- function(var, recodes, afr, anr = TRUE, levels) {
         code = if (!any(is.na(result.valid))) result <- as.numeric(result)
       )
   }
-  return(result)
+  
+  result
 }
