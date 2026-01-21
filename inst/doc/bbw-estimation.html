@@ -29,46 +29,32 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -80,55 +66,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -360,216 +345,354 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<p>The <code>{bbw}</code> package was developed primarily as a tool for analysing complex sample survey data. It was developed specifically for use with the <a href="https://rapidsurveys.io/ramOPmanual/">Rapid Assessment Method (RAM)</a> and the <a href="https://researchonline.lshtm.ac.uk/id/eprint/2572543">Simple Spatial Survey Method (S3M)</a>.</p>
-<p>The <a href="https://rapidsurveys.io/bbw/reference/indicatorsHH.html"><code>indicatorsHH</code></a> is a survey dataset collected from a RAM survey in Bakool, Bay, and Middle Shabelle regions of Somalia. The <a href="https://rapidsurveys.io/bbw/reference/villageData.html"><code>villageData</code></a> contains the list of villages/clusters that were sampled in the survey that collected the <code>indicatorsHH</code> dataset. These is a good set of data to demonstrate the use of the <code>{bbw}</code> package to perform blocked weighted bootstrap estimation.</p>
+<p>The <code>{bbw}</code> package was developed primarily as a tool for
+analysing complex sample survey data. It was developed specifically for
+use with the <a href="https://rapidsurveys.io/ramOPmanual/">Rapid
+Assessment Method (RAM)</a> and the <a href="https://researchonline.lshtm.ac.uk/id/eprint/2572543">Simple
+Spatial Survey Method (S3M)</a>.</p>
+<p>The <a href="https://rapidsurveys.io/bbw/reference/indicatorsHH.html"><code>indicatorsHH</code></a>
+is a survey dataset collected from a RAM survey in Bakool, Bay, and
+Middle Shabelle regions of Somalia. The <a href="https://rapidsurveys.io/bbw/reference/villageData.html"><code>villageData</code></a>
+contains the list of villages/clusters that were sampled in the survey
+that collected the <code>indicatorsHH</code> dataset. These is a good
+set of data to demonstrate the use of the <code>{bbw}</code> package to
+perform blocked weighted bootstrap estimation.</p>
 <div id="original-bootstrapping-workflow" class="section level2">
 <h2>Original bootstrapping workflow</h2>
 <div id="bootstrap-resampling-with-bootbw" class="section level3">
 <h3>Bootstrap resampling with <code>bootBW()</code></h3>
-<p>The <code>bootBW()</code> function is the original bootstrap resampling function of the package. It can be used as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>boot_df &lt;-<span class="st"> </span><span class="kw">bootBW</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span></code></pre></div>
-<p>This call to <code>bootBW()</code> takes in the survey dataset <code>indicatorsHH</code> as its first argument (<code>x</code>). This dataset is expected to have a variable labelled as <code>psu</code> which identifies the primary sampling unit from which data was collected during the survey and then additional variables for the indicators to be estimated. The second argument (<code>w</code>) is for the dataset of the list of primary sampling units that were sampled in the survey to collect the survey data specified in <code>x</code>. This dataset, which in this case is <code>villageData</code>, should have at least a variable labelled <code>psu</code> which identified the primary sampling unit that matches the same variable in the survey dataset and a variable labelled <code>pop</code> for the population size of the primary sampling unit. The <code>statistic</code> argument specified the type of statistic to apply to the bootstrap replicates. There are two of these functions available from the <code>{bbw}</code> package - <code>bootClassic()</code> and the <code>bootPROBIT()</code>. For this example, the <code>bootClassic()</code> function is used to get the mean value of the bootstrap replicates. This is generally useful for binomial type of indicators and for continuous variables of which to get the mean of. The <code>params</code> argument takes in values of the indicator names in <code>x</code> to be estimated. In this example, two indicator names for antenatal care are specified. Finally, the argument for <code>replicates</code> specify the number of replicate bootstraps to be performed. The default of 400 replicates is used here. This results in the following (showing first 10 rows):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">head</span>(boot_df, <span class="dv">10</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="co">#&gt;         anc1       anc2</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co">#&gt; 1  0.1864175 0.01874714</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co">#&gt; 2  0.2290978 0.02035985</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="co">#&gt; 3  0.2343529 0.02641509</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="co">#&gt; 4  0.2548555 0.03084955</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co">#&gt; 5  0.2698864 0.02662863</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">#&gt; 6  0.2151356 0.01819052</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="co">#&gt; 7  0.1937834 0.02677702</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="co">#&gt; 8  0.2148349 0.01678766</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="co">#&gt; 9  0.2593480 0.02891566</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="co">#&gt; 10 0.2151414 0.01922153</span></span></code></pre></div>
-<p>The result is a <code>data.frame()</code> of bootstrap replicates with number of rows equal to the number or replicates and number of columns equal to the number of <code>params</code> specified. Hence, <code>boot_df</code> has 400 rows and 2 columns.</p>
+<p>The <code>bootBW()</code> function is the original bootstrap
+resampling function of the package. It can be used as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>boot_df <span class="ot">&lt;-</span> <span class="fu">bootBW</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span></code></pre></div>
+<p>This call to <code>bootBW()</code> takes in the survey dataset
+<code>indicatorsHH</code> as its first argument (<code>x</code>). This
+dataset is expected to have a variable labelled as <code>psu</code>
+which identifies the primary sampling unit from which data was collected
+during the survey and then additional variables for the indicators to be
+estimated. The second argument (<code>w</code>) is for the dataset of
+the list of primary sampling units that were sampled in the survey to
+collect the survey data specified in <code>x</code>. This dataset, which
+in this case is <code>villageData</code>, should have at least a
+variable labelled <code>psu</code> which identified the primary sampling
+unit that matches the same variable in the survey dataset and a variable
+labelled <code>pop</code> for the population size of the primary
+sampling unit. The <code>statistic</code> argument specified the type of
+statistic to apply to the bootstrap replicates. There are two of these
+functions available from the <code>{bbw}</code> package -
+<code>bootClassic()</code> and the <code>bootPROBIT()</code>. For this
+example, the <code>bootClassic()</code> function is used to get the mean
+value of the bootstrap replicates. This is generally useful for binomial
+type of indicators and for continuous variables of which to get the mean
+of. The <code>params</code> argument takes in values of the indicator
+names in <code>x</code> to be estimated. In this example, two indicator
+names for antenatal care are specified. Finally, the argument for
+<code>replicates</code> specify the number of replicate bootstraps to be
+performed. The default of 400 replicates is used here. This results in
+the following (showing first 10 rows):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">head</span>(boot_df, <span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt;         anc1       anc2</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; 1  0.1864175 0.01874714</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; 2  0.2290978 0.02035985</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; 3  0.2343529 0.02641509</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; 4  0.2548555 0.03084955</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; 5  0.2698864 0.02662863</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; 6  0.2151356 0.01819052</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; 7  0.1937834 0.02677702</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; 8  0.2148349 0.01678766</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; 9  0.2593480 0.02891566</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; 10 0.2151414 0.01922153</span></span></code></pre></div>
+<p>The result is a <code>data.frame()</code> of bootstrap replicates
+with number of rows equal to the number or replicates and number of
+columns equal to the number of <code>params</code> specified. Hence,
+<code>boot_df</code> has 400 rows and 2 columns.</p>
 </div>
 <div id="bootstrap-estimation" class="section level3">
 <h3>Bootstrap estimation</h3>
-<p>Using <code>boot_df</code> containing bootstrap replicates of the indicators <code>anc1</code> and <code>anc2</code>, estimating each indicator with a 95% confidence interval using the <em>percentile bootstrap method</em>. This can be simply done using the <code>quantile()</code> function from the <code>stats</code> package as follows:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>est_df &lt;-<span class="st"> </span><span class="kw">lapply</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  <span class="dt">X =</span> boot_df,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  <span class="dt">FUN =</span> quantile,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>  <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">do.call</span>(rbind, <span class="dt">args =</span> _)</span></code></pre></div>
-<p>The <code>quantile()</code> function is used to get the 50th percentile (for the estimate) and the 2.5th and the 97.5th percentile of the bootstrap replicates to get the lower confidence limit and the upper confidence limits (respectively) of the indicator estimate. This gives the following results:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>est_df</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="co">#&gt;            50%       2.5%      97.5%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="co">#&gt; anc1 0.2316597 0.17709920 0.28849265</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="co">#&gt; anc2 0.0218962 0.01347537 0.03484835</span></span></code></pre></div>
+<p>Using <code>boot_df</code> containing bootstrap replicates of the
+indicators <code>anc1</code> and <code>anc2</code>, estimating each
+indicator with a 95% confidence interval using the <em>percentile
+bootstrap method</em>. This can be simply done using the
+<code>quantile()</code> function from the <code>stats</code> package as
+follows:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>est_df <span class="ot">&lt;-</span> <span class="fu">lapply</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="at">X =</span> boot_df,</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="at">FUN =</span> quantile,</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, <span class="at">args =</span> _)</span></code></pre></div>
+<p>The <code>quantile()</code> function is used to get the 50th
+percentile (for the estimate) and the 2.5th and the 97.5th percentile of
+the bootstrap replicates to get the lower confidence limit and the upper
+confidence limits (respectively) of the indicator estimate. This gives
+the following results:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>est_df</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt;            50%       2.5%      97.5%</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; anc1 0.2316597 0.17709920 0.28849265</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt; anc2 0.0218962 0.01347537 0.03484835</span></span></code></pre></div>
 </div>
 <div id="stratified-bootstrap-resampling" class="section level3">
 <h3>Stratified bootstrap resampling</h3>
-<p>Note that the <code>indicatorsHH</code> dataset has geographical stratification. Specifically, the survey from which this data was collected was designed to be representative of three regions in Somalia with the regions identified through the <code>region</code> variable in <code>indicatorsHH</code>. Because of this the more appropriate bootstrap resampling approach would be to resample within each region. To do this using the original <code>bootBW()</code> function would require restructuring the survey dataset by region and then passing the region-stratified datasets individually to the <code>bootBW()</code> function. This may look something like this:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co">## Split indicators by region ----</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>indicators_by_region &lt;-<span class="st"> </span><span class="kw">split</span>(indicatorsHH, <span class="dt">f =</span> indicatorsHH<span class="op">$</span>region)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="co">## Split psus by region ----</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>psus_by_region &lt;-<span class="st"> </span><span class="kw">split</span>(villageData, <span class="dt">f =</span> villageData<span class="op">$</span>region)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a><span class="co">## Bootstrap</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>boot_df &lt;-<span class="st"> </span><span class="kw">Map</span>(</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>  <span class="dt">f =</span> bootBW, </span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>  <span class="dt">x =</span> indicators_by_region, </span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>  <span class="dt">w =</span> psus_by_region, </span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>  <span class="dt">statistic =</span> <span class="kw">rep</span>(<span class="kw">list</span>(<span class="kw">get</span>(<span class="st">&quot;bootClassic&quot;</span>)), <span class="kw">length</span>(indicators_by_region)), </span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>  <span class="dt">params =</span> <span class="kw">rep</span>(<span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)), <span class="kw">length</span>(indicators_by_region))</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span></code></pre></div>
-<p>The <code>bootBW()</code> function only accepts single <code>data.frame</code> inputs for <code>x</code> and <code>w</code> arguments. Hence, to resample data from within region, the datasets will have to be split into separate <code>data.frame</code> inputs per region and then <code>bootBW()</code> applied to each separately. In the example above, this is done by concatenating each of the inputs to <code>bootBW()</code> into a list and then using the <code>Map()</code> function is sent to <code>bootBW()</code> sequentially. This produces a list of the <code>data.frame</code> bootstrap resample for each region (shown below):</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">class</span>(boot_df)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a><span class="kw">head</span>(boot_df<span class="op">$</span>Bay, <span class="dv">10</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a><span class="co">#&gt;         anc1        anc2</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a><span class="co">#&gt; 1  0.4043419 0.013568521</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a><span class="co">#&gt; 2  0.3907104 0.020491803</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a><span class="co">#&gt; 3  0.3224044 0.023224044</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a><span class="co">#&gt; 4  0.2645862 0.016282225</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a><span class="co">#&gt; 5  0.2708618 0.008207934</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a><span class="co">#&gt; 6  0.3297151 0.024423338</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a><span class="co">#&gt; 7  0.3627717 0.004076087</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a><span class="co">#&gt; 8  0.3662551 0.016460905</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a><span class="co">#&gt; 9  0.3410641 0.016371078</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a><span class="co">#&gt; 10 0.2277628 0.014824798</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a><span class="kw">head</span>(boot_df<span class="op">$</span>Bakool, <span class="dv">10</span>)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a><span class="co">#&gt;         anc1       anc2</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a><span class="co">#&gt; 1  0.2916667 0.17415730</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a><span class="co">#&gt; 2  0.2928177 0.09497207</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a><span class="co">#&gt; 3  0.3260274 0.14804469</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true"></a><span class="co">#&gt; 4  0.2747253 0.11864407</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true"></a><span class="co">#&gt; 5  0.2900552 0.11797753</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true"></a><span class="co">#&gt; 6  0.1823204 0.05849582</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true"></a><span class="co">#&gt; 7  0.4065934 0.16343490</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true"></a><span class="co">#&gt; 8  0.2727273 0.11731844</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true"></a><span class="co">#&gt; 9  0.2821918 0.06944444</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true"></a><span class="co">#&gt; 10 0.2939560 0.09749304</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true"></a><span class="kw">head</span>(boot_df<span class="op">$</span><span class="st">`</span><span class="dt">Middle Shabelle</span><span class="st">`</span>, <span class="dv">10</span>)</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true"></a><span class="co">#&gt;         anc1        anc2</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true"></a><span class="co">#&gt; 1  0.1723447 0.011055276</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true"></a><span class="co">#&gt; 2  0.2550607 0.018367347</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true"></a><span class="co">#&gt; 3  0.1330724 0.010816126</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true"></a><span class="co">#&gt; 4  0.2830189 0.024551464</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true"></a><span class="co">#&gt; 5  0.1921569 0.014792899</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true"></a><span class="co">#&gt; 6  0.2217782 0.010989011</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true"></a><span class="co">#&gt; 7  0.2117647 0.007881773</span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true"></a><span class="co">#&gt; 8  0.2165156 0.019172553</span></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true"></a><span class="co">#&gt; 9  0.2195122 0.015625000</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true"></a><span class="co">#&gt; 10 0.2274549 0.015075377</span></span></code></pre></div>
-<p>To estimate the per region results from this bootstrap resampling, the following can be implemented:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>est_df &lt;-<span class="st"> </span><span class="kw">lapply</span>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>  <span class="dt">X =</span> boot_df, </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>  <span class="dt">FUN =</span> <span class="cf">function</span>(x) <span class="kw">lapply</span>(</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    x, <span class="dt">FUN =</span> quantile, <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span><span class="st"> </span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">do.call</span>(rbind, <span class="dt">args =</span> _)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>est_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>  <span class="dt">region =</span> <span class="kw">names</span>(est_df),</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>  <span class="dt">indicators =</span> <span class="kw">lapply</span>(est_df, <span class="dt">FUN =</span> row.names) <span class="op">|</span><span class="er">&gt;</span><span class="st"> </span><span class="kw">unlist</span>(),</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>  <span class="kw">do.call</span>(rbind, <span class="dt">args =</span> est_df)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a><span class="kw">row.names</span>(est_df) &lt;-<span class="st"> </span><span class="ot">NULL</span></span></code></pre></div>
+<p>Note that the <code>indicatorsHH</code> dataset has geographical
+stratification. Specifically, the survey from which this data was
+collected was designed to be representative of three regions in Somalia
+with the regions identified through the <code>region</code> variable in
+<code>indicatorsHH</code>. Because of this the more appropriate
+bootstrap resampling approach would be to resample within each region.
+To do this using the original <code>bootBW()</code> function would
+require restructuring the survey dataset by region and then passing the
+region-stratified datasets individually to the <code>bootBW()</code>
+function. This may look something like this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="do">## Split indicators by region ----</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>indicators_by_region <span class="ot">&lt;-</span> <span class="fu">split</span>(indicatorsHH, <span class="at">f =</span> indicatorsHH<span class="sc">$</span>region)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="do">## Split psus by region ----</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>psus_by_region <span class="ot">&lt;-</span> <span class="fu">split</span>(villageData, <span class="at">f =</span> villageData<span class="sc">$</span>region)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="do">## Bootstrap</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>boot_df <span class="ot">&lt;-</span> <span class="fu">Map</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>  <span class="at">f =</span> bootBW, </span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  <span class="at">x =</span> indicators_by_region, </span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  <span class="at">w =</span> psus_by_region, </span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>  <span class="at">statistic =</span> <span class="fu">rep</span>(<span class="fu">list</span>(<span class="fu">get</span>(<span class="st">&quot;bootClassic&quot;</span>)), <span class="fu">length</span>(indicators_by_region)), </span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>  <span class="at">params =</span> <span class="fu">rep</span>(<span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)), <span class="fu">length</span>(indicators_by_region))</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>)</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="co">#&gt; ✔ x has the appropriate/expected data structure</span></span></code></pre></div>
+<p>The <code>bootBW()</code> function only accepts single
+<code>data.frame</code> inputs for <code>x</code> and <code>w</code>
+arguments. Hence, to resample data from within region, the datasets will
+have to be split into separate <code>data.frame</code> inputs per region
+and then <code>bootBW()</code> applied to each separately. In the
+example above, this is done by concatenating each of the inputs to
+<code>bootBW()</code> into a list and then using the <code>Map()</code>
+function is sent to <code>bootBW()</code> sequentially. This produces a
+list of the <code>data.frame</code> bootstrap resample for each region
+(shown below):</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">class</span>(boot_df)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">head</span>(boot_df<span class="sc">$</span>Bay, <span class="dv">10</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co">#&gt;         anc1        anc2</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="co">#&gt; 1  0.4043419 0.013568521</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co">#&gt; 2  0.3907104 0.020491803</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; 3  0.3224044 0.023224044</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">#&gt; 4  0.2645862 0.016282225</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">#&gt; 5  0.2708618 0.008207934</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt; 6  0.3297151 0.024423338</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="co">#&gt; 7  0.3627717 0.004076087</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="co">#&gt; 8  0.3662551 0.016460905</span></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="co">#&gt; 9  0.3410641 0.016371078</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co">#&gt; 10 0.2277628 0.014824798</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="fu">head</span>(boot_df<span class="sc">$</span>Bakool, <span class="dv">10</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="co">#&gt;         anc1       anc2</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="co">#&gt; 1  0.2916667 0.17415730</span></span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="co">#&gt; 2  0.2928177 0.09497207</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a><span class="co">#&gt; 3  0.3260274 0.14804469</span></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="co">#&gt; 4  0.2747253 0.11864407</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="co">#&gt; 5  0.2900552 0.11797753</span></span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="co">#&gt; 6  0.1823204 0.05849582</span></span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="co">#&gt; 7  0.4065934 0.16343490</span></span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="co">#&gt; 8  0.2727273 0.11731844</span></span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="co">#&gt; 9  0.2821918 0.06944444</span></span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a><span class="co">#&gt; 10 0.2939560 0.09749304</span></span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a><span class="fu">head</span>(boot_df<span class="sc">$</span><span class="st">`</span><span class="at">Middle Shabelle</span><span class="st">`</span>, <span class="dv">10</span>)</span>
+<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a><span class="co">#&gt;         anc1        anc2</span></span>
+<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a><span class="co">#&gt; 1  0.1723447 0.011055276</span></span>
+<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a><span class="co">#&gt; 2  0.2550607 0.018367347</span></span>
+<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a><span class="co">#&gt; 3  0.1330724 0.010816126</span></span>
+<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a><span class="co">#&gt; 4  0.2830189 0.024551464</span></span>
+<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a><span class="co">#&gt; 5  0.1921569 0.014792899</span></span>
+<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a><span class="co">#&gt; 6  0.2217782 0.010989011</span></span>
+<span id="cb6-38"><a href="#cb6-38" tabindex="-1"></a><span class="co">#&gt; 7  0.2117647 0.007881773</span></span>
+<span id="cb6-39"><a href="#cb6-39" tabindex="-1"></a><span class="co">#&gt; 8  0.2165156 0.019172553</span></span>
+<span id="cb6-40"><a href="#cb6-40" tabindex="-1"></a><span class="co">#&gt; 9  0.2195122 0.015625000</span></span>
+<span id="cb6-41"><a href="#cb6-41" tabindex="-1"></a><span class="co">#&gt; 10 0.2274549 0.015075377</span></span></code></pre></div>
+<p>To estimate the per region results from this bootstrap resampling,
+the following can be implemented:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>est_df <span class="ot">&lt;-</span> <span class="fu">lapply</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="at">X =</span> boot_df, </span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="at">FUN =</span> <span class="cf">function</span>(x) <span class="fu">lapply</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    x, <span class="at">FUN =</span> quantile, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="fu">do.call</span>(rbind, <span class="at">args =</span> _)</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>est_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="at">region =</span> <span class="fu">names</span>(est_df),</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="at">indicators =</span> <span class="fu">lapply</span>(est_df, <span class="at">FUN =</span> row.names) <span class="sc">|&gt;</span> <span class="fu">unlist</span>(),</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, <span class="at">args =</span> est_df)</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>)</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="fu">row.names</span>(est_df) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
 <p>which results in the following output:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>est_df</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="co">#&gt;            region indicators       X50.       X2.5.     X97.5.</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="co">#&gt; 1          Bakool       anc1 0.30261405 0.188862799 0.41167127</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a><span class="co">#&gt; 2             Bay       anc2 0.11251780 0.050903865 0.19504237</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a><span class="co">#&gt; 3 Middle Shabelle       anc1 0.32391543 0.217411669 0.43781930</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a><span class="co">#&gt; 4          Bakool       anc2 0.01893172 0.002766156 0.03663750</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a><span class="co">#&gt; 5             Bay       anc1 0.20220114 0.134820317 0.27676772</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a><span class="co">#&gt; 6 Middle Shabelle       anc2 0.01724140 0.007237952 0.03006251</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>est_df</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="co">#&gt;            region indicators       X50.       X2.5.     X97.5.</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt; 1          Bakool       anc1 0.30261405 0.188862799 0.41167127</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#&gt; 2             Bay       anc2 0.11251780 0.050903865 0.19504237</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">#&gt; 3 Middle Shabelle       anc1 0.32391543 0.217411669 0.43781930</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">#&gt; 4          Bakool       anc2 0.01893172 0.002766156 0.03663750</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">#&gt; 5             Bay       anc1 0.20220114 0.134820317 0.27676772</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; 6 Middle Shabelle       anc2 0.01724140 0.007237952 0.03006251</span></span></code></pre></div>
 </div>
 </div>
 <div id="alternative-blocked-weighted-bootstrap-function-set" class="section level2">
 <h2>Alternative blocked weighted bootstrap function set</h2>
-<p>From this demonstration, the <code>bootBW()</code> function proves to be straightforward to implement and can be easily incorporated into a user’s workflow based on their dataset and their analytic needs. However, as shown above, this flexibility requires a lot more extra coding from the user to get from resampling to indicator estimates.</p>
-<p>Starting from <code>v0.3.0</code>, an alternative set of functions is available to perform blocked weighted bootstrap resampling that facilitates all the steps from resampling to estimation. Below is an example of how to use this alternative set of functions for the same tasks shown above.</p>
-<p>This set of functions attempts to make the blocked weighted bootstrap algorithm more efficient through vectorisation and use of parallelisation techniques. The function syntax has been kept consistent with <code>bootBW()</code> for ease of transition.</p>
+<p>From this demonstration, the <code>bootBW()</code> function proves to
+be straightforward to implement and can be easily incorporated into a
+user’s workflow based on their dataset and their analytic needs.
+However, as shown above, this flexibility requires a lot more extra
+coding from the user to get from resampling to indicator estimates.</p>
+<p>Starting from <code>v0.3.0</code>, an alternative set of functions is
+available to perform blocked weighted bootstrap resampling that
+facilitates all the steps from resampling to estimation. Below is an
+example of how to use this alternative set of functions for the same
+tasks shown above.</p>
+<p>This set of functions attempts to make the blocked weighted bootstrap
+algorithm more efficient through vectorisation and use of
+parallelisation techniques. The function syntax has been kept consistent
+with <code>bootBW()</code> for ease of transition.</p>
 <div id="bootstrap-resampling-with-boot_bw" class="section level3">
 <h3>Bootstrap resampling with <code>boot_bw()</code></h3>
-<p>The <code>boot_bw()</code> function is the alternative bootstrap resampling function of the package. It can be used as follows:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>boot_df &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>  <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>  <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>)</span></code></pre></div>
-<p>This call to <code>boot_bw()</code> takes in the survey dataset <code>indicatorsHH</code> as its first argument (<code>x</code>). This dataset is expected to have a variable labelled as <code>psu</code> which identifies the primary sampling unit from which data was collected during the survey and then additional variables for the indicators to be estimated. The second argument (<code>w</code>) is for the dataset of the list of primary sampling units that were sampled in the survey to collect the survey data specified in <code>x</code>. This dataset, which in this case is <code>villageData</code>, should have at least a variable labelled <code>psu</code> which identified the primary sampling unit that matches the same variable in the survey dataset and a variable labelled <code>pop</code> for the population size of the primary sampling unit. The <code>statistic</code> argument specified the type of statistic to apply to the bootstrap replicates. There are two of these functions available from the <code>{bbw}</code> package - <code>bootClassic()</code> and the <code>bootPROBIT()</code>. For this example, the <code>bootClassic()</code> function is used to get the mean value of the bootstrap replicates. This is generally useful for binomial type of indicators and for continuous variables of which to get the mean of. The <code>params</code> argument takes in values of the indicator names in <code>x</code> to be estimated. In this example, two indicator names for antenatal care are specified. Finally, the argument for <code>replicates</code> specify the number of replicate bootstraps to be performed. The default of 400 replicates is used here. As can be noted, the <code>boot_bw()</code> takes on the same type of arguments as <code>bootBW()</code> and the syntax is exactly the same. Hence, using this alternative function will be familiar to those who have had experience using the original function.</p>
-<p>However, the output of the <code>boot_bw()</code> function is structured differently from the <code>bootBW()</code> function. The <code>boot_bw()</code> function produces and object of class <code>boot_bw</code>.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">class</span>(boot_df)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;boot_bw&quot;</span></span></code></pre></div>
-<p>The object <code>boot_bw</code> is a list with 4 named components: <code>params</code> for the values specified for the <code>params</code> argument, <code>replicates</code> for the number of bootstrap replicates performed, <code>strata</code> for the values specified for stratification, and <code>boot_data</code> which is the bootstrap results.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">names</span>(boot_df)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;params&quot;     &quot;replicates&quot; &quot;strata&quot;     &quot;boot_data&quot;</span></span></code></pre></div>
-<p>The <code>boot_data</code> component of the <code>boot_bw</code> object corresponds to the output of the <code>bootBW()</code> function.</p>
-<p>Other than the difference in the structure of the output, this alternative function also has three additional arguments for the new features it provides.</p>
+<p>The <code>boot_bw()</code> function is the alternative bootstrap
+resampling function of the package. It can be used as follows:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>boot_df <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic,</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>)</span></code></pre></div>
+<p>This call to <code>boot_bw()</code> takes in the survey dataset
+<code>indicatorsHH</code> as its first argument (<code>x</code>). This
+dataset is expected to have a variable labelled as <code>psu</code>
+which identifies the primary sampling unit from which data was collected
+during the survey and then additional variables for the indicators to be
+estimated. The second argument (<code>w</code>) is for the dataset of
+the list of primary sampling units that were sampled in the survey to
+collect the survey data specified in <code>x</code>. This dataset, which
+in this case is <code>villageData</code>, should have at least a
+variable labelled <code>psu</code> which identified the primary sampling
+unit that matches the same variable in the survey dataset and a variable
+labelled <code>pop</code> for the population size of the primary
+sampling unit. The <code>statistic</code> argument specified the type of
+statistic to apply to the bootstrap replicates. There are two of these
+functions available from the <code>{bbw}</code> package -
+<code>bootClassic()</code> and the <code>bootPROBIT()</code>. For this
+example, the <code>bootClassic()</code> function is used to get the mean
+value of the bootstrap replicates. This is generally useful for binomial
+type of indicators and for continuous variables of which to get the mean
+of. The <code>params</code> argument takes in values of the indicator
+names in <code>x</code> to be estimated. In this example, two indicator
+names for antenatal care are specified. Finally, the argument for
+<code>replicates</code> specify the number of replicate bootstraps to be
+performed. The default of 400 replicates is used here. As can be noted,
+the <code>boot_bw()</code> takes on the same type of arguments as
+<code>bootBW()</code> and the syntax is exactly the same. Hence, using
+this alternative function will be familiar to those who have had
+experience using the original function.</p>
+<p>However, the output of the <code>boot_bw()</code> function is
+structured differently from the <code>bootBW()</code> function. The
+<code>boot_bw()</code> function produces and object of class
+<code>boot_bw</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">class</span>(boot_df)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;boot_bw&quot;</span></span></code></pre></div>
+<p>The object <code>boot_bw</code> is a list with 4 named components:
+<code>params</code> for the values specified for the <code>params</code>
+argument, <code>replicates</code> for the number of bootstrap replicates
+performed, <code>strata</code> for the values specified for
+stratification, and <code>boot_data</code> which is the bootstrap
+results.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">names</span>(boot_df)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;params&quot;     &quot;replicates&quot; &quot;strata&quot;     &quot;boot_data&quot;</span></span></code></pre></div>
+<p>The <code>boot_data</code> component of the <code>boot_bw</code>
+object corresponds to the output of the <code>bootBW()</code>
+function.</p>
+<p>Other than the difference in the structure of the output, this
+alternative function also has three additional arguments for the new
+features it provides.</p>
 <ul>
-<li><p><code>strata</code> - the variable name in <code>x</code> that provides information on the stratification in the survey data. This is by default set to <code>NULL</code> signifying no stratification. This argument allows the user to perform stratified bootstrap resampling conveniently through the <code>boot_bw()</code> function.</p></li>
-<li><p><code>parallel</code> - whether or not to use parallel computation for the bootstrap resampling. This is by default set to FALSE in which case bootstrap resampling is done sequentially as is with the <code>bootBW()</code> function. If set to TRUE, the function sets up parallel computing and utilises the machines available cores (see <code>cores</code> argument below).</p></li>
-<li><p><code>cores</code> - the number of cores to use for parallel computation. This is only evaluated if <code>parallel = TRUE</code>. By default, this is set to 1 less the total available number of cores of the current machine.</p></li>
+<li><p><code>strata</code> - the variable name in <code>x</code> that
+provides information on the stratification in the survey data. This is
+by default set to <code>NULL</code> signifying no stratification. This
+argument allows the user to perform stratified bootstrap resampling
+conveniently through the <code>boot_bw()</code> function.</p></li>
+<li><p><code>parallel</code> - whether or not to use parallel
+computation for the bootstrap resampling. This is by default set to
+FALSE in which case bootstrap resampling is done sequentially as is with
+the <code>bootBW()</code> function. If set to TRUE, the function sets up
+parallel computing and utilises the machines available cores (see
+<code>cores</code> argument below).</p></li>
+<li><p><code>cores</code> - the number of cores to use for parallel
+computation. This is only evaluated if <code>parallel = TRUE</code>. By
+default, this is set to 1 less the total available number of cores of
+the current machine.</p></li>
 </ul>
-<p>To use these new features and functionality, the call to <code>boot_bw()</code> would look something like this:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>boot_df &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>  <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>  <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="dt">strata =</span> <span class="st">&quot;region&quot;</span>, <span class="dt">parallel =</span> <span class="ot">TRUE</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>)</span></code></pre></div>
-<p>This produces a <code>boot_bw</code> class <code>list</code> object with the same components as above. The only different is that the <code>boot_data</code> component is a <code>list</code> (instead of a <code>data.frame</code>) with each component being the <code>data.frame</code> bootstrap resampling output for each of the strata in the dataset.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">class</span>(boot_df)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;boot_bw&quot;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a><span class="kw">class</span>(boot_df<span class="op">$</span>boot_data)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true"></a><span class="kw">names</span>(boot_df<span class="op">$</span>boot_data)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Bakool&quot;          &quot;Bay&quot;             &quot;Middle Shabelle&quot;</span></span></code></pre></div>
+<p>To use these new features and functionality, the call to
+<code>boot_bw()</code> would look something like this:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>boot_df <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>  <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic,</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>  <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="at">strata =</span> <span class="st">&quot;region&quot;</span>, <span class="at">parallel =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>)</span></code></pre></div>
+<p>This produces a <code>boot_bw</code> class <code>list</code> object
+with the same components as above. The only different is that the
+<code>boot_data</code> component is a <code>list</code> (instead of a
+<code>data.frame</code>) with each component being the
+<code>data.frame</code> bootstrap resampling output for each of the
+strata in the dataset.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">class</span>(boot_df)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;boot_bw&quot;</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="fu">class</span>(boot_df<span class="sc">$</span>boot_data)</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="fu">names</span>(boot_df<span class="sc">$</span>boot_data)</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Bakool&quot;          &quot;Bay&quot;             &quot;Middle Shabelle&quot;</span></span></code></pre></div>
 </div>
 <div id="bootstrap-estimation-1" class="section level3">
 <h3>Bootstrap estimation</h3>
-<p>The <code>boot_bw_estimate()</code> function can then be applied to the output of the <code>boot_bw()</code> function to get the indicator estimates with 95% confidence interval.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">boot_bw_estimate</span>(boot_df)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="co">#&gt;            region indicator        est        lcl        ucl</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a><span class="co">#&gt; 1          Bakool      anc1 0.43888889 0.38881944 0.48888889</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a><span class="co">#&gt; 2          Bakool      anc2 0.38055556 0.32497749 0.43062500</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a><span class="co">#&gt; 3             Bay      anc1 0.71619066 0.63887512 0.77849135</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a><span class="co">#&gt; 4             Bay      anc2 0.00254615 0.00000000 0.01294677</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a><span class="co">#&gt; 5 Middle Shabelle      anc1 0.20757542 0.14514451 0.28293531</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a><span class="co">#&gt; 6 Middle Shabelle      anc2 0.05065259 0.03133757 0.07453108</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a><span class="co">#&gt;            se</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true"></a><span class="co">#&gt; 1 0.027718319</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true"></a><span class="co">#&gt; 2 0.027983726</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true"></a><span class="co">#&gt; 3 0.036466569</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true"></a><span class="co">#&gt; 4 0.003743969</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true"></a><span class="co">#&gt; 5 0.036375151</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true"></a><span class="co">#&gt; 6 0.011463590</span></span></code></pre></div>
-<p>These two functions can be piped to each other for a single workflow from bootstrap resampling to estimation.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="kw">boot_bw</span>(</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a>  <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>  <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="dt">strata =</span> <span class="st">&quot;region&quot;</span>, <span class="dt">parallel =</span> <span class="ot">TRUE</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a>) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a><span class="co">#&gt;            region indicator         est       lcl        ucl</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a><span class="co">#&gt; 1          Bakool      anc1 0.438888889 0.3805556 0.49444444</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a><span class="co">#&gt; 2          Bakool      anc2 0.376731302 0.3138889 0.43888889</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a><span class="co">#&gt; 3             Bay      anc1 0.719130072 0.6487833 0.78255787</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a><span class="co">#&gt; 4             Bay      anc2 0.002534854 0.0000000 0.01262706</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a><span class="co">#&gt; 5 Middle Shabelle      anc1 0.203423968 0.1428536 0.27819673</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a><span class="co">#&gt; 6 Middle Shabelle      anc2 0.051256281 0.0339071 0.07622767</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a><span class="co">#&gt;            se</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a><span class="co">#&gt; 1 0.030425611</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a><span class="co">#&gt; 2 0.030033802</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a><span class="co">#&gt; 3 0.034273078</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a><span class="co">#&gt; 4 0.003372086</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a><span class="co">#&gt; 5 0.033966913</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a><span class="co">#&gt; 6 0.010573679</span></span></code></pre></div>
+<p>The <code>boot_bw_estimate()</code> function can then be applied to
+the output of the <code>boot_bw()</code> function to get the indicator
+estimates with 95% confidence interval.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">boot_bw_estimate</span>(boot_df)</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co">#&gt;            region indicator        est        lcl        ucl</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="co">#&gt; 1          Bakool      anc1 0.43888889 0.38881944 0.48888889</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="co">#&gt; 2          Bakool      anc2 0.38055556 0.32497749 0.43062500</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="co">#&gt; 3             Bay      anc1 0.71619066 0.63887512 0.77849135</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="co">#&gt; 4             Bay      anc2 0.00254615 0.00000000 0.01294677</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="co">#&gt; 5 Middle Shabelle      anc1 0.20757542 0.14514451 0.28293531</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="co">#&gt; 6 Middle Shabelle      anc2 0.05065259 0.03133757 0.07453108</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="co">#&gt;            se</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="co">#&gt; 1 0.027718319</span></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="co">#&gt; 2 0.027983726</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="co">#&gt; 3 0.036466569</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a><span class="co">#&gt; 4 0.003743969</span></span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a><span class="co">#&gt; 5 0.036375151</span></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a><span class="co">#&gt; 6 0.011463590</span></span></code></pre></div>
+<p>These two functions can be piped to each other for a single workflow
+from bootstrap resampling to estimation.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">boot_bw</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic,</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>  <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="at">strata =</span> <span class="st">&quot;region&quot;</span>, <span class="at">parallel =</span> <span class="cn">TRUE</span></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>  <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">#&gt;            region indicator         est       lcl        ucl</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">#&gt; 1          Bakool      anc1 0.438888889 0.3805556 0.49444444</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co">#&gt; 2          Bakool      anc2 0.376731302 0.3138889 0.43888889</span></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="co">#&gt; 3             Bay      anc1 0.719130072 0.6487833 0.78255787</span></span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a><span class="co">#&gt; 4             Bay      anc2 0.002534854 0.0000000 0.01262706</span></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">#&gt; 5 Middle Shabelle      anc1 0.203423968 0.1428536 0.27819673</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a><span class="co">#&gt; 6 Middle Shabelle      anc2 0.051256281 0.0339071 0.07622767</span></span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a><span class="co">#&gt;            se</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a><span class="co">#&gt; 1 0.030425611</span></span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a><span class="co">#&gt; 2 0.030033802</span></span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a><span class="co">#&gt; 3 0.034273078</span></span>
+<span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a><span class="co">#&gt; 4 0.003372086</span></span>
+<span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a><span class="co">#&gt; 5 0.033966913</span></span>
+<span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a><span class="co">#&gt; 6 0.010573679</span></span></code></pre></div>
 </div>
 </div>
 

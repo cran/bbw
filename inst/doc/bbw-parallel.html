@@ -29,46 +29,32 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -80,55 +66,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -360,31 +345,39 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<p>A key feature of the most recent <code>{bbw}</code> update is its new function set that uses parallelisation for bootstrap resampling. This vignette explores the bootstrap resampling efficiencies gained with parallelisation.</p>
-<p>Applying the original and the alternative function/set to the Somalia survey dataset available from this package, bootstrap resampling is applied using the same parameters and the time the operation it takes to run is measured and compared.</p>
+<p>A key feature of the most recent <code>{bbw}</code> update is its new
+function set that uses parallelisation for bootstrap resampling. This
+vignette explores the bootstrap resampling efficiencies gained with
+parallelisation.</p>
+<p>Applying the original and the alternative function/set to the Somalia
+survey dataset available from this package, bootstrap resampling is
+applied using the same parameters and the time the operation it takes to
+run is measured and compared.</p>
 <div id="bootstrap-resampling-without-parallelisation" class="section level2">
 <h2>Bootstrap resampling without parallelisation</h2>
-<p>In this comparison, the original and alternative function/set both implement <em>sequential</em> bootstrap resampling with number of <em>parameters</em> set at varying values.</p>
+<p>In this comparison, the original and alternative function/set both
+implement <em>sequential</em> bootstrap resampling with number of
+<em>parameters</em> set at varying values.</p>
 <div id="using-one-parameter-and-400-replicates" class="section level3">
 <h3>Using one parameter and 400 replicates</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">## Original bootstrap ----</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>boot_orig_<span class="dv">1</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  boot1_results &lt;-<span class="st"> </span><span class="kw">bootBW</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, <span class="dt">params =</span> <span class="st">&quot;anc1&quot;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">lapply</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>      <span class="dt">FUN =</span> quantile,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>      <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    )</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a><span class="co">## Alternative bootstrap ----</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>boot_alt_<span class="dv">1</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, <span class="dt">params =</span> <span class="st">&quot;anc1&quot;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="do">## Original bootstrap ----</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>boot_orig_1_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  boot1_results <span class="ot">&lt;-</span> <span class="fu">bootBW</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, <span class="at">params =</span> <span class="st">&quot;anc1&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>    <span class="fu">lapply</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>      <span class="at">FUN =</span> quantile,</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>    )</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="do">## Alternative bootstrap ----</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>boot_alt_1_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, <span class="at">params =</span> <span class="st">&quot;anc1&quot;</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>)</span></code></pre></div>
 <div id="tgcehtuokl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#tgcehtuokl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -863,72 +856,76 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
   
 </table>
 </div>
-<p>Performing bootstrap resampling sequentially, the original function took <strong>31.486</strong> seconds to run while the alternative function set took <strong>25.892</strong> seconds to run. There was very little difference between the original and the alternative function/set.</p>
+<p>Performing bootstrap resampling sequentially, the original function
+took <strong>31.486</strong> seconds to run while the alternative
+function set took <strong>25.892</strong> seconds to run. There was very
+little difference between the original and the alternative
+function/set.</p>
 </div>
 <div id="using-varying-number-of-parameters-and-400-replicates" class="section level3">
 <h3>Using varying number of parameters and 400 replicates</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">## Original bootstrap ----</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>boot_orig_<span class="dv">2</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>  boot1_results &lt;-<span class="st"> </span><span class="kw">bootBW</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">lapply</span>(</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>      <span class="dt">FUN =</span> quantile,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>      <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    )</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>boot_orig_<span class="dv">4</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>  boot1_results &lt;-<span class="st"> </span><span class="kw">bootBW</span>(</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a><span class="st">    </span><span class="kw">lapply</span>(</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>      <span class="dt">FUN =</span> quantile,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>      <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>    )</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>boot_orig_<span class="dv">8</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>  boot1_results &lt;-<span class="st"> </span><span class="kw">bootBW</span>(</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a>    )</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a><span class="st">    </span><span class="kw">lapply</span>(</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a>      <span class="dt">FUN =</span> quantile,</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a>      <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a>    )</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a>)</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true"></a><span class="co">## Alternative bootstrap ----</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true"></a>boot_alt_<span class="dv">2</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true"></a>)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true"></a>boot_alt_<span class="dv">4</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true"></a>)</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true"></a>boot_alt_<span class="dv">8</span>_param &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true"></a>    )</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="do">## Original bootstrap ----</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>boot_orig_2_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  boot1_results <span class="ot">&lt;-</span> <span class="fu">bootBW</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>    <span class="fu">lapply</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>      <span class="at">FUN =</span> quantile,</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>    )</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>)</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>boot_orig_4_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>  boot1_results <span class="ot">&lt;-</span> <span class="fu">bootBW</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>    <span class="fu">lapply</span>(</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>      <span class="at">FUN =</span> quantile,</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>    )</span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a>)</span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a>boot_orig_8_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>  boot1_results <span class="ot">&lt;-</span> <span class="fu">bootBW</span>(</span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(</span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
+<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a>    )</span>
+<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>    <span class="fu">lapply</span>(</span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a>      <span class="at">FUN =</span> quantile,</span>
+<span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a>      <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.025</span>, <span class="fl">0.975</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" tabindex="-1"></a>    )</span>
+<span id="cb2-35"><a href="#cb2-35" tabindex="-1"></a>)</span>
+<span id="cb2-36"><a href="#cb2-36" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" tabindex="-1"></a><span class="do">## Alternative bootstrap ----</span></span>
+<span id="cb2-38"><a href="#cb2-38" tabindex="-1"></a>boot_alt_2_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-39"><a href="#cb2-39" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb2-40"><a href="#cb2-40" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-41"><a href="#cb2-41" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-43"><a href="#cb2-43" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb2-44"><a href="#cb2-44" tabindex="-1"></a>)</span>
+<span id="cb2-45"><a href="#cb2-45" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" tabindex="-1"></a>boot_alt_4_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-47"><a href="#cb2-47" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb2-48"><a href="#cb2-48" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-49"><a href="#cb2-49" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-51"><a href="#cb2-51" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb2-52"><a href="#cb2-52" tabindex="-1"></a>)</span>
+<span id="cb2-53"><a href="#cb2-53" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" tabindex="-1"></a>boot_alt_8_param <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb2-55"><a href="#cb2-55" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb2-56"><a href="#cb2-56" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb2-57"><a href="#cb2-57" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(</span>
+<span id="cb2-58"><a href="#cb2-58" tabindex="-1"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
+<span id="cb2-59"><a href="#cb2-59" tabindex="-1"></a>    )</span>
+<span id="cb2-60"><a href="#cb2-60" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-61"><a href="#cb2-61" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb2-62"><a href="#cb2-62" tabindex="-1"></a>)</span></code></pre></div>
 <div id="yliaqxmopd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#yliaqxmopd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1430,118 +1427,124 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
   
 </table>
 </div>
-<p>There are marginal gains with the alternative function set when the number of parameters more than 1 but the gains do not increase with the increase in the number of parameters.</p>
+<p>There are marginal gains with the alternative function set when the
+number of parameters more than 1 but the gains do not increase with the
+increase in the number of parameters.</p>
 </div>
 </div>
 <div id="bootstrap-resampling-with-parallelisation" class="section level2">
 <h2>Bootstrap resampling with parallelisation</h2>
-<p>In this comparison, the alternative function/set implements <em>parallel</em> bootstrap resampling with number of <em>parameters</em> set at varying values and number of parallel cores set at varying values and then compared to performance of the original function as above.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">## Alternative bootstrap - 2 cores ----</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>boot_alt_<span class="dv">1</span>_param_<span class="dv">2</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">2</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>boot_alt_<span class="dv">2</span>_param_<span class="dv">2</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">2</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>boot_alt_<span class="dv">4</span>_param_<span class="dv">2</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">2</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a>boot_alt_<span class="dv">8</span>_param_<span class="dv">2</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>    ), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">2</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true"></a>)</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true"></a><span class="co">## Alternative bootstrap - 4 cores ----</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true"></a>boot_alt_<span class="dv">1</span>_param_<span class="dv">4</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">4</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true"></a>)</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true"></a></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true"></a>boot_alt_<span class="dv">2</span>_param_<span class="dv">4</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">4</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true"></a>)</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true"></a>boot_alt_<span class="dv">4</span>_param_<span class="dv">4</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">4</span></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true"></a>)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true"></a></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true"></a>boot_alt_<span class="dv">8</span>_param_<span class="dv">4</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true"></a>    ), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">4</span></span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true"></a>)</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true"></a></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true"></a><span class="co">## Alternative bootstrap - 8 cores ----</span></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true"></a>boot_alt_<span class="dv">1</span>_param_<span class="dv">8</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">8</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true"></a>)</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true"></a>boot_alt_<span class="dv">2</span>_param_<span class="dv">8</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">8</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true"></a>)</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true"></a></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true"></a>boot_alt_<span class="dv">4</span>_param_<span class="dv">8</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">8</span></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true"></a>)</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true"></a></span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true"></a>boot_alt_<span class="dv">8</span>_param_<span class="dv">8</span>_cores &lt;-<span class="st"> </span><span class="kw">system.time</span>(</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true"></a>  boot2_results &lt;-<span class="st"> </span><span class="kw">boot_bw</span>(</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true"></a>    <span class="dt">x =</span> indicatorsHH, <span class="dt">w =</span> villageData, <span class="dt">statistic =</span> bootClassic, </span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true"></a>    <span class="dt">params =</span> <span class="kw">c</span>(</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true"></a>    ), <span class="dt">parallel =</span> <span class="ot">TRUE</span>, <span class="dt">cores =</span> <span class="dv">8</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true"></a>  ) <span class="op">|</span><span class="er">&gt;</span></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true"></a><span class="st">    </span><span class="kw">boot_bw_estimate</span>()</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true"></a>)</span></code></pre></div>
+<p>In this comparison, the alternative function/set implements
+<em>parallel</em> bootstrap resampling with number of
+<em>parameters</em> set at varying values and number of parallel cores
+set at varying values and then compared to performance of the original
+function as above.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## Alternative bootstrap - 2 cores ----</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>boot_alt_1_param_2_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    <span class="at">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>boot_alt_2_param_2_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">2</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>)</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>boot_alt_4_param_2_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">2</span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>)</span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>boot_alt_8_param_2_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
+<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a>    ), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">2</span></span>
+<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a>)</span>
+<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" tabindex="-1"></a><span class="do">## Alternative bootstrap - 4 cores ----</span></span>
+<span id="cb3-38"><a href="#cb3-38" tabindex="-1"></a>boot_alt_1_param_4_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-39"><a href="#cb3-39" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-40"><a href="#cb3-40" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-41"><a href="#cb3-41" tabindex="-1"></a>    <span class="at">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">4</span></span>
+<span id="cb3-42"><a href="#cb3-42" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-44"><a href="#cb3-44" tabindex="-1"></a>)</span>
+<span id="cb3-45"><a href="#cb3-45" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" tabindex="-1"></a>boot_alt_2_param_4_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-47"><a href="#cb3-47" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-48"><a href="#cb3-48" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-49"><a href="#cb3-49" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">4</span></span>
+<span id="cb3-50"><a href="#cb3-50" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-51"><a href="#cb3-51" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-52"><a href="#cb3-52" tabindex="-1"></a>)</span>
+<span id="cb3-53"><a href="#cb3-53" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" tabindex="-1"></a>boot_alt_4_param_4_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-55"><a href="#cb3-55" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-56"><a href="#cb3-56" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-57"><a href="#cb3-57" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">4</span></span>
+<span id="cb3-58"><a href="#cb3-58" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-59"><a href="#cb3-59" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-60"><a href="#cb3-60" tabindex="-1"></a>)</span>
+<span id="cb3-61"><a href="#cb3-61" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" tabindex="-1"></a>boot_alt_8_param_4_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-63"><a href="#cb3-63" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-64"><a href="#cb3-64" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-65"><a href="#cb3-65" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(</span>
+<span id="cb3-66"><a href="#cb3-66" tabindex="-1"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
+<span id="cb3-67"><a href="#cb3-67" tabindex="-1"></a>    ), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">4</span></span>
+<span id="cb3-68"><a href="#cb3-68" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-69"><a href="#cb3-69" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-70"><a href="#cb3-70" tabindex="-1"></a>)</span>
+<span id="cb3-71"><a href="#cb3-71" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" tabindex="-1"></a><span class="do">## Alternative bootstrap - 8 cores ----</span></span>
+<span id="cb3-74"><a href="#cb3-74" tabindex="-1"></a>boot_alt_1_param_8_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-75"><a href="#cb3-75" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-76"><a href="#cb3-76" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-77"><a href="#cb3-77" tabindex="-1"></a>    <span class="at">params =</span> <span class="st">&quot;anc1&quot;</span>, <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">8</span></span>
+<span id="cb3-78"><a href="#cb3-78" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-79"><a href="#cb3-79" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-80"><a href="#cb3-80" tabindex="-1"></a>)</span>
+<span id="cb3-81"><a href="#cb3-81" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" tabindex="-1"></a>boot_alt_2_param_8_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-83"><a href="#cb3-83" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-84"><a href="#cb3-84" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-85"><a href="#cb3-85" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">8</span></span>
+<span id="cb3-86"><a href="#cb3-86" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-87"><a href="#cb3-87" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-88"><a href="#cb3-88" tabindex="-1"></a>)</span>
+<span id="cb3-89"><a href="#cb3-89" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" tabindex="-1"></a>boot_alt_4_param_8_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-91"><a href="#cb3-91" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-92"><a href="#cb3-92" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-93"><a href="#cb3-93" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(<span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">8</span></span>
+<span id="cb3-94"><a href="#cb3-94" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-95"><a href="#cb3-95" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-96"><a href="#cb3-96" tabindex="-1"></a>)</span>
+<span id="cb3-97"><a href="#cb3-97" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" tabindex="-1"></a>boot_alt_8_param_8_cores <span class="ot">&lt;-</span> <span class="fu">system.time</span>(</span>
+<span id="cb3-99"><a href="#cb3-99" tabindex="-1"></a>  boot2_results <span class="ot">&lt;-</span> <span class="fu">boot_bw</span>(</span>
+<span id="cb3-100"><a href="#cb3-100" tabindex="-1"></a>    <span class="at">x =</span> indicatorsHH, <span class="at">w =</span> villageData, <span class="at">statistic =</span> bootClassic, </span>
+<span id="cb3-101"><a href="#cb3-101" tabindex="-1"></a>    <span class="at">params =</span> <span class="fu">c</span>(</span>
+<span id="cb3-102"><a href="#cb3-102" tabindex="-1"></a>      <span class="st">&quot;anc1&quot;</span>, <span class="st">&quot;anc2&quot;</span>, <span class="st">&quot;anc3&quot;</span>, <span class="st">&quot;anc4&quot;</span>, <span class="st">&quot;hhs1&quot;</span>, <span class="st">&quot;hhs2&quot;</span>, <span class="st">&quot;hhs3&quot;</span>, <span class="st">&quot;hhs4&quot;</span></span>
+<span id="cb3-103"><a href="#cb3-103" tabindex="-1"></a>    ), <span class="at">parallel =</span> <span class="cn">TRUE</span>, <span class="at">cores =</span> <span class="dv">8</span></span>
+<span id="cb3-104"><a href="#cb3-104" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-105"><a href="#cb3-105" tabindex="-1"></a>    <span class="fu">boot_bw_estimate</span>()</span>
+<span id="cb3-106"><a href="#cb3-106" tabindex="-1"></a>)</span></code></pre></div>
 <div id="ccotcrngkr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#ccotcrngkr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
